@@ -1,0 +1,89 @@
+
+ main{
+    width: 1200px;
+    height: auto;
+    background-image: linear-gradient(lightblue,white);
+    margin: 0 auto;
+    box-shadow: lightslategray 0px 0px  8px ;
+    border-radius: 20px;
+    position: relative;
+    bottom: 60px;
+}
+body{
+    background-color: rgba(230, 218, 168, 0.288);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    margin: 0 auto;
+    text-align: center;
+}
+nav{
+    height: 50px;
+    background-color: salmon;
+    padding-left: 50px;
+}
+nav li{
+    line-height: 50px;
+    font-size: 16px;
+    display: inline;
+    width: 20%;
+    height: 100%;
+    float: left;
+    text-align: center;
+}
+nav a{
+    display: block;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+}
+nav a:hover{
+    color:white;
+}
+header img{
+    width: 100%;
+    border: none;
+}
+#l1:hover{
+    background-color: skyblue;
+}
+#l2:hover{
+    background-color: skyblue;
+}
+h1{
+    text-align: center;
+    font-family: 宋体;
+}
+h2{
+    font-family: 宋体;
+}
+main p{
+    font-size: 18px;
+    line-height: 24px;
+}
+.bl{
+    text-align: center;
+}
+footer{
+    width: 100%;
+    border-top: black 1px dotted;
+    text-align: center;
+    height:50px;
+}
+.video{
+  text-align: center;
+}
+#video{
+    text-align: center;
+}
+#music{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+}
+.music{
+    text-align: center;
+}
