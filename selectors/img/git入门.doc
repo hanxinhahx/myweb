@@ -1,0 +1,113 @@
+GIT入门课程内容安排
+
+1、 GIT
+	1.1 什么是git
+		Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。
+		Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。
+		Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。
+	1.2 git的运行原理
+		
+
+2、 GIT安装配置
+	2.1 git安装
+		下载地址：https://www.git-scm.com/download/
+		打开安装程序，初学者可无脑下一步，完成安装。
+
+	2.2 公钥配置
+		公钥生成命令：ssh-keygen -t rsa -C "邮箱"（执行后连续三次回车即可）
+		切换公钥路径：cd ~/.ssh
+		打开公钥文件id_rsa.pub ：cat id_rsa.pub
+		复制公钥添加至远程仓库中（GitHub、码云）
+
+3、	GIT：版本控制
+	3.1 基本流程
+		1.选中要进行版本控制的文件夹右键选中 Git Bash Here 进入命令界面
+		2.git init  //初始化本地仓库
+		3.git add 文件名  //添加该文件至本地缓存区，文件后一定要跟文件类型（.txt || .java || .cpp....）
+		4.git commit -m "注释信息" +文件名  //将缓存区中的文件添加至本地仓库
+		5.git remote add origin 远程仓库地址  //连接远程仓库
+		6.git push -u origin  分支名称（初始只有一个分支 master） //将本地库中的项目文件提交至远程仓库，如果该项目不是第一次提交可省略 -u
+              提交出现问题时的解决方法：
+                1、当git无法发送文件时，有可能是存在两个仓库不同，因此存在两个master分支，所以要合并分支，在git pull origin master 后添加--allow-unrelated-histories（允许不同仓库的）
+	2、还有可能是本地仓库多了个README.md文件，因此在创建仓库时要加个README.md文件	
+    退出仓库：git remote remove 要退出的别名
+4、 GIT：获取文件
+	4.1 拷贝远程仓库内容
+		1.git pull  //刷新远程仓库
+		2.git clone 远程仓库地址  //拷贝远程仓库
+
+	4.2 git设置忽略规则
+		> .gitignore   设置忽略文件夹
+		可通过  echo " 文件名或文件夹名称 " >> .gitignore   //将某个文件或文件夹忽略（添加到.gitignore中）
+		可通过  echo " *.文件后缀 " >> .gitignore  //将某类型文件全部忽略（添加到.gitignore中）
+		例如：echo " *.txt " >> .gitignore  //就是将目录中所有的txt文件忽略
+
+5、	GIT命令
+	5.1 常用操作命令
+		git init  //初始化操作，开始版本控制
+		mkdir 文件名    //创建文件夹
+		git status   //查看文件状态
+		git status  -u   //可查看文件夹内文件状态
+		ls  //查看文件夹内容
+		ls -a  //显示文件夹路径 并查看内容
+		cat 文件名称  //查看文件内容
+		git log  //查看版本记录
+		git log  --pretty=oneline  //简约查看版本记录
+		git reflog  //查看版本回退步数
+		git add "文件名"  //将文件提交到缓存区
+		git commit  "文件名"  //将缓存区的指定文件提交到版本库
+		//如果git commit 后没有使用 -m，会进入注释信息编写界面，编写完成后，按Esc+（大写）ZZ可退出并保存
+
+	5.2项目署名
+		git  config user.name "名字"
+		git   config user.email  "邮箱"
+		（仅输入git  config user.name或git   config user.email可查看用户名字和邮箱）
+
+	5.3系统署名
+		git  config  --global user.name "名字"
+		git config --global user.email "邮箱"
+
+6. git深入学习
+	6.1 分支
+		查看分支： git  branch  -v
+		创建分支： git  branch  新分支名
+		删除分支： git  branch  -d  分支名
+		切换分支： git  checkout   分支名
+		合并分支：
+			第一步：切换到接受修改的分支上
+				git  checkout  接受修改的分支名f
+			第二部：执行merge命令
+				git  merge  有新内容的分支名
+
+	6.2 git官方文档：https://git-scm.com/book/zh/v2
+
+	6.3 学到这里，你仅仅是踏入了git版本控制的大门。前路漫漫，所以，加油吧！
+git reflog查看历史版本
+breach
+git merge +分支名，合并分支
+git remote remove+仓库名称，断开远程仓库
+git remote get-url获取当前关联的远程仓库
+git remote set-url github +远程仓库地址：重新更改远程仓库地址
+git push 远程仓库名称+分支名称：提交
+版本控制 ：用git log 查看版本记录，最完整的形式，多屏显示控制方式：空格向上翻页，b向下翻页，q退出
+git log --pretty==oneline 以一行显示修改信息，包括详细的哈希值
+git log --oneline 哈希值简略
+git.reflog：还显示到某个历史记录要几步
+用索引退回：git reset --hard 要退回的版本的索引
+前进与退回操作一样
+异或：只能用于退回版本，用几个异或符号就是退回几步^，用~后面加要退回几步：git reset --hard HEAD ~步数
+reset的三个参数对比：
+--soft：仅仅在本地库移动HEAD指针
+--mixed：在本地库移动指针，同时重置暂存区
+--hard：在本地库移动指针，重置暂存区，重置工作区
+git diff 文件名：将工作区的文件与暂存区指定的文件进行比较，不带文件名则比较多个文件
+分支：
+分支的作用：实现软件中不同的功能，使多个功能同时开发，提高效率，同时可以防止master分支出现问题
+通常分支名有feature_开头表示功能，分支之间是独立的
+hot_fix：热修复，服务器在跑，一般用于master修复的分支，修复完立即合并
+合并分支：
+第一步：先切换到master上
+第二步：merge 需要合并的分支名
+在合并时commit后不能带文件名
+删除分支：git push 远程仓库名称  --delete 要删除的分支
+创建并转到新分支：git checkout -b 新分支名

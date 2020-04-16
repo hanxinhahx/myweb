@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<style type="text/css">
+			 .box1{
+				margin: 20px; 
+			 }
+		 	.box1 a[href]{
+				 padding-left: 25px;
+				 margin-right: 30px;
+				 text-decoration: none;
+				 background-repeat: no-repeat;
+				 color: black;
+				 background-size: 20px;
+			 } 
+			 .box1 [href$=".doc"]{
+				background-image: url(img/word.jpg);
+			}
+			.box1 [href$=".chm"]{
+				background-image: url(img/chm.jpg);
+			}
+			.box1 [href$=".pptx"]{
+				background-image: url(img/ppt.jpg);
+			}
+			.box1 [href]:hover{
+				color: coral;
+				text-decoration: underline;
+			}
+			.box2{
+				margin: 40px;
+			}
+			.box2 a[href]{
+				 padding-left: 35px;
+				 margin-right: 30px;
+				 text-decoration: none;
+				 text-decoration: none;
+				 background-repeat: no-repeat;
+				 color: black;
+				 background-size: 30px;
+			 } 
+			 .box2 [href^="https"]{
+				 background-image: url(img/GitHub.jpg);
+			 }
+			.box2 [href^="com"]:hover{
+				text-decoration: underline;
+				color: skyblue;
+			}
+		</style>
+	</body>
+	 <div class="box1">
+		 <a href="img/git入门.doc" download="git入门手册.doc">git入门手册</a>
+		 <a href="img/HTML手册.chm" download="HTML手册">HTML手册</a>
+		 <a href="img/JAVA.pptx" download="JAVA二维数组">JAVA二维数组</a>
+		 <br>
+		 
+	 </div>
+	 <div class="box2">
+		 <a href="https://github.com" target="_blank">Github</a>
+	 </div>
+</html>
