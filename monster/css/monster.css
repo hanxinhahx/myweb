@@ -1,0 +1,21 @@
+body{
+	background-color: lightgoldenrodyellow;
+}
+.monster{
+	width: 10em;
+	height: 13em;
+	background-color: limegreen;
+	margin: 300px auto;
+	border-radius: 5em 5em 5% 5% / 6em 6em 5% 5%;
+}
+.eye{
+	position: absolute;
+	width: 6.5em;
+	height: 6.5em;
+	background-color: white;
+	border-radius: 50%;
+	left: calc((10em-6.5em)/3);
+}
+.mouth{
+	position: absolute;
+}
