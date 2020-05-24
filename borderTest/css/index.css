@@ -1,0 +1,35 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.explain{
+	color: green;
+	position: relative;
+}
+.explain::after{
+	content: attr(title);
+	width: 100px;
+
+	transition: all 1s;
+	word-break: keep-all;
+	opacity: 0;
+	position: absolute;
+	left: -150px;
+	background-color: black;
+	color: white;
+	
+}
+.explain::after{
+/* 	content: '';
+	width: 10px;
+	height: 10px; */
+	background-color: tomato;
+}
+ .explain:hover::after{
+	width: 100px; 
+	position: absolute;
+	word-break: keep-all;
+	bottom: 0px;
+	left: calc(100%);
+	opacity: 1;
+}
