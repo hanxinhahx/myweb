@@ -1,0 +1,43 @@
+   .bar{
+            width: 600px;
+            height: 35px;
+            display: flex;
+            justify-content: space-around;
+            margin: 200px auto;
+            padding-left: 50px;
+        }
+        .mun{
+            display: inline-block;
+            width: 25%;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            background-color: cadetblue;
+        }
+        .mun:hover{
+            background-color:tomato;
+        }
+        .bar2{
+            width: 25%;
+            margin: 100px auto;
+            width: 600px;
+            height: 70px;
+        }
+        .bar2 ul li{
+            display: inline-block;
+            float: left;
+            width: 25%;
+            background-color: cadetblue;
+            text-align: center;
+            line-height: 50px;
+        }
+        .bar2 ul li a{
+            display: block;
+            text-decoration: none;
+            color: white;
+        }
+        .bar2 ul li:hover{
+            background-color: tomato;
+        }
