@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<ul>
+				<li v-for="(p,index) in persons" :key="index">
+					{{p.name}}------{{p.age}}-------{{index}}
+					<button type="button" @click="deleted(index)">删除</button>
+					<button type="button" @click="updata(index, {name:'cae',age:18})">增加</button>
+					<!-- <button type="button" @click="speak">提示</button> -->
+				</li>
+				
+			</ul>
+			<ul>
+				<li v-for="(value,key) in persons[0]" :key="key">
+					{{value}}-----{{key}}
+				</li>
+			</ul>
+			</div>
+	</body>
+	<script type="text/javascript">
+		let app=new Vue({
+			el:'#app',
+			data:{
+				persons:[
+					{name:'张三',age:20},
+					{name:'李四',age:18},
+					{name:'王五',age:22}
+				]
+			},
+			methods:{
+				deleted (index){
+					alert('删除成功')
+					this.persons.splice(index,1)
+				},
+				updata (index,value){
+					alert('添加成功')
+					this.persons.splice(index,0,value)
+				},
+				speak (){
+					alert('你好')
+				}
+			},
+		
+		})
+	</script>
+</html>

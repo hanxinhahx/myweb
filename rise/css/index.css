@@ -1,0 +1,25 @@
+*{
+		margin: 0;
+		padding: 0;
+}
+#bar{
+	width: 20%;
+	height: 800px;
+	background-color: aqua;
+}
+#bar::after{
+	width: 25px;
+	height: 25px;
+	background-color: coral;
+}
+#content{
+	width: 80%;
+	height: 800px;
+	background-color: #FF7F50;
+	position: relative;
+	left: 20%;
+	bottom: 800px;
+}
+/* .bar:hover{
+	display: block;
+} */

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		#mun{
+			width: 20%;
+			height: 800px;
+			background-color: tomato;
+			position: relative;
+		}
+		.box1{
+			width: 50px;
+			height: 50px;
+			background-color: skyblue;
+			position: absolute;
+			left: 100px;
+			bottom: 300px;
+		}
+		.bl{
+			width: 50px;
+			height: 50px;
+			background-color: black;
+			position: absolute;
+			left: 0px;
+			bottom: 300px;
+		}
+	</style>
+	<body>
+		<div id="app">
+			<div id="mun" v-show="isShow"></div>
+	<!-- 		<button type="button" @click="change">点击</button> -->
+			<div  :class="b" @click="change"></div>
+		</div>
+		
+		
+	<!-- 	<button type="button" @click="change">点击</button> -->
+	</body>
+	<script type="text/javascript">
+		let app=new Vue({
+			el:'#app',
+			data:{
+				isShow:true,
+				b:'box1'
+			},
+			methods:{
+				change(){
+					this.isShow=!this.isShow
+				}
+			}
+		})
+	</script>
+</html>

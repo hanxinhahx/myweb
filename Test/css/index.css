@@ -1,0 +1,58 @@
+ .box1{
+	 margin: 200px auto;
+	 width: 100px;
+	 height: 100px;
+	 background-color: skyblue;
+	 transition:all 0.5s;
+	 text-align: center;
+	 line-height: 100px;
+ }
+ .box1 a{
+	 text-decoration: none;
+	 color: white;
+	 font-size: 20px;
+ }
+ .box1:hover{
+	 border-radius: 35%;
+	 background-color: red;
+	 transform: scale(1.1);
+
+ }
+.box1 a:hover{
+	color: yellow;
+}
+.box1 a::selection{
+	background-color: rgba(100,100,100,0.5);
+}
+ .box2 {
+	 width: 300px;
+	 height: 300px;
+	 border: gray 1px solid;
+ }
+ .box3{
+	 width: 300px;
+	 height: 300px;
+	 margin: 500px auto;
+	 border: gray 1px solid;
+ }
+ .box2:hover{
+	 box-shadow: 20px 20px 10px #808080;
+	 transition: 0.8s;
+	 position: relative;
+	 bottom: 20px;
+	 background-color: tomato;
+ }
+ .box3:hover{
+ 	 box-shadow: 20px 20px 10px #808080;
+ 	 transition: 0.8s;
+ 	 position: relative;
+ 	 bottom: 20px;
+ 	 background-color: tomato;
+ }
+#link {
+	 display: block;
+ }
+ 
+ /* #link2{
+	 display: block;
+ } */

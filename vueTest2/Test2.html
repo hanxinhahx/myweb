@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<ol>
+				<li v-for="demo,key in students" v-if="key%2==0" :key=1>
+					<h3>{{key}}&nbsp;&nbsp;{{demo.name}}&nbsp;&nbsp;{{demo.age}}&nbsp;&nbsp;{{demo.sex}}</h3>
+				</li>
+			</ol>
+		</div>
+	</body>
+	<script type="text/javascript">
+		let app=new Vue({
+			el:"#app",
+			data:{
+				students: [
+					{name:"张三",age:20,sex:"male"},
+					{name:"李四",age:21,sex:"male"},
+					{name:"王五",age:18,sex:"fmale"}
+				]
+			}
+		})
+	</script>
+</html>

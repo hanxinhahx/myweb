@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.box1{
+				width: 400px;
+				height: 400px;
+				background-color: cornflowerblue;
+			}
+			.box2{
+				width: 200px;
+				height: 200px;
+				background-color: orange; 
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1" v-show="isShow">
+			<div class="box2"></div>
+		</div>
+		<script type="text/javascript">
+			var app=new Vue({
+				el:'.box1',
+				data:{
+					isShow:true
+				}
+			})
+		</script>
+	</body>
+</html>

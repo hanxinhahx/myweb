@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+	<div id="example">
+	<p>原字符串：{{message}}</p>
+	<p>翻转后的字符串：{{messagerever}}</p>
+	</div>
+	</body>
+	<script type="text/javascript">
+		// var vm = new Vue({
+		// 	el:'#example',
+		// 	data: {
+		// 		message:'Hello'
+		// 	},
+		// 	computed: {
+		// 		reversedMessage: function() {
+		// 		return this.message.split('').reverse().join('')
+		// 		}
+		// 	}
+		// })
+		let app=new Vue({
+			el:'#example',
+			data:{
+				message:'Hello worlfd'
+			},
+			computed :{
+				messagerever: function() {
+						// const name=this.message.split(' ')
+						// console.log(name[0])
+						return this.message.split('').reverse().join('')
+						console.log(app.messagerever)
+				}
+			}
+		})
+	</script>
+</html>

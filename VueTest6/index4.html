@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+			<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		.aclass{
+			font-size: 20px;
+			color: #000FFF;
+		}
+		.bclass{
+			font-size: 25px;
+			color: deeppink;
+		}
+		.isA{
+			color: tomato;
+		}
+		.isB{
+			font-size: 25px;
+		}
+	</style>
+	<body>
+		<div id="app">
+			<p :class="c">绑定字符串为类名</p>
+			<p :class="{isA,isB}">绑定对象为类名</p>
+		</div>
+		<button @click="updata">点击</button>
+	</body>
+
+	<script type="text/javascript">
+		let app=new Vue({
+			el:'#app',
+			data:{
+				c:'bclass',
+				isA:true,
+				isB:true
+			},
+		methods:{
+			updata(){
+				this.c='aclass'
+			}
+		}
+		})
+	</script>
+</html>

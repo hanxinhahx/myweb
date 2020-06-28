@@ -1,0 +1,45 @@
+/* #box1::before{
+	content: '';
+	width: 112.75px;
+	height: 65px;
+	display: inline-block;
+	background-image: url(../img/CSS精灵.png);
+	position: 0 0;
+} */
+#box1::before{
+	content: '';
+	display: inline-block;
+	width: 100px;
+	height: 64px;
+	background-image: url(../img/CSS精灵.png);
+	background-position: 0px -1.2px;
+	transition: 0.5s;
+}
+#box2::before{
+	content: '';
+	display: inline-block;
+	width: 100px;
+	height: 64px;
+	background-image: url(../img/CSS精灵.png);
+	background-position: -112px -1.2px;
+	transition: 0.5s;
+}#box3::before{
+	content: '';
+	display: inline-block;
+	width: 100px;
+	height: 64px;
+	background-image: url(../img/CSS精灵.png);
+	background-position: -223px -1.2px;
+	transition: 0.5s;
+}#box4::before{
+	content: '';
+	display: inline-block;
+	width: 100px;
+	height: 64px;
+	background-image: url(../img/CSS精灵.png);
+	background-position: -336px -1.2px;
+	transition: 0.5s;
+}
+#box1 h2,#box2 h2,#box3 h2,#box4 h4{
+	display: inline-block;
+}

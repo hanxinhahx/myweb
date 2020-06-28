@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+ <!-- 	<div id="app-7">
+	  <ol>
+	      现在我们为每个 todo-item 提供 todo 对象
+	      todo 对象是变量，即其内容可以是动态的。
+	      我们也需要为每个组件提供一个“key”，稍后再
+	      作详细解释。
+	    <todo-item
+	      v-for="item in groceryList"
+	      v-bind:todo="item"
+	      v-bind:key="item.id"
+	    ></todo-item>
+	  </ol>
+	</div> -->
+	<div id="app">
+		  <ol>
+		     <!-- 现在我们为每个 todo-item 提供 todo 对象
+		      todo 对象是变量，即其内容可以是动态的。
+		      我们也需要为每个组件提供一个“key”，稍后再
+		      作详细解释。 -->
+		    <todo-item
+		      v-for="item in studentslist"
+		      v-bind:todo="item"
+		      v-bind:key="item.id"
+		    ></todo-item>
+		  </ol>
+		</div>
+		
+	</body>
+	<script type="text/javascript">
+		Vue.component(
+			'todo-item',{	
+				props:['todo'],
+			    template:'<li>{{'todo.txet'}}</li>',
+			})
+			let app=new Vue({
+				el:'#app',
+				data:{
+					studentslist:[
+						{id:0, text:'黄宣涵'},
+						{id:1, text:'李军焘'},
+						{id:2, text:'徐佳龙'},
+						{id:3, text:'韩彪'},
+						{id:4, text:'郑楠'},
+						{id:5, text:'胡晨晖'}
+					]
+				}
+			})
+	</script>
+</html>

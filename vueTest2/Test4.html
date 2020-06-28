@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		#app{
+			width: 20%;
+			height: 800px;
+		}
+	</style>
+	<body>
+		<div id="app">
+				<button type="button" v-on:click="change">点击更换背景</button>
+				<p>{{masage}}</p>
+				<input type="text" v-model="masage">
+				<ol>
+				  <!-- 创建一个 todo-item 组件的实例 -->
+				  <todo-item></todo-item>
+				  <ol>
+				    <!-- 创建一个 todo-item 组件的实例 -->
+				    <todo-item></todo-item>
+				  </ol>
+				  <ol>
+				    <!-- 创建一个 todo-item 组件的实例 -->
+				    <todo-item></todo-item>
+				  </ol>
+				</ol>
+		</div>
+	</body>
+	<script type="text/javascript">
+		Vue.component('todo-item', {
+		  template: '<li>这是个待办项</li>'
+		})
+		let app=new Vue({
+			el:"#app",
+			data:{
+				masage:"Hello world!"
+			},
+			methods:{
+				change:function(){
+					document.body.style.backgroundColor="#87CEEB"
+				}
+			}
+		})
+	</script>
+</html>

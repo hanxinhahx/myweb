@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body>
+		<div id="image">
+			 
+		</div>
+		<!-- <div id="box"></div> -->
+		<button type="button" onclick="clickfunction()" id="<change></change>">点亮邮院</button>
+		<button type="reset" onclick="reset()" id="reset">重置</button>
+		<script type="text/javascript">
+			function clickfunction(){
+				var img=document.getElementById('image');
+				img.style.background='url(img/school.jpeg)';
+			}
+			function reset(){
+				var change=document.getElementById('image');
+				change.style.background='url(img/schoolan.jpg)';
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,43 @@
+#image{
+	width: 1000px;
+	height: 749px;
+	margin: 200px auto;
+	background-color: #778899;
+	background-image: url(../img/schoolan.jpg);
+	background-size: cover;
+	transition: all 1.5s;
+	position: relative;
+}
+#image:hover{
+	background-image: url(../img/school.jpeg);
+	background-size: cover;
+}
+button{
+	list-style: none;
+	background-color: #0000FF;
+	border: none;
+	width: 100px;
+	height: 50px;
+}
+button:hover{
+	color: white;
+	position: absolute;
+	background-color: tomato;
+	top: 996px;
+}
+#box{
+	width: 1000px;
+	height: 749px;
+	margin: 200px auto;
+	background-color: #000000;
+}
+#change{
+	position: absolute;
+	left: 600px;
+	top: 1000px;
+}
+#reset{
+	position: absolute;
+	left: 850px;
+	top: 1000px;
+}

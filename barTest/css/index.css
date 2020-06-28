@@ -3,6 +3,7 @@
             height: 35px;
             display: flex;
             justify-content: space-around;
+			flex-flow: column wrap;
             margin: 200px auto;
             padding-left: 50px;
         }
@@ -41,3 +42,15 @@
         .bar2 ul li:hover{
             background-color: tomato;
         }
+		.bar3 ul{
+			display: block;
+			display: flex;
+		flex-flow: row column; 
+			width: 800px;
+			height: 800px;
+		}
+		.bar3 li a{
+			display: block;
+			width: 25%;
+			height: 100%;
+		}
